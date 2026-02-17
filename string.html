@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uppercase Live</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body, html{
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(135deg, #005c87 0%, #66a6ff 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      width: 90%;
+      padding: 20px;
+    }
+    section{
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      color: #fff;
+    }
+    input{
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      width: 80%;
+      text-align: center;
+      font-weight: bold;
+    }
+    button{
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background: rgba(255,255,255,0.3);
+      color: #fff;
+      transition: 0.3s;
+    }
+    button:hover{
+      background: rgba(255,255,255,0.6);
+      color: #000;
+    }
+    h3{
+      margin-bottom: 15px;
+    }
+    .accordion-button{
+      background: rgba(255,255,255,0.2);
+      color: #030303;
+    }
+    
+    .sec3{
+      width: 90%;
+    }
+    code{
+      background: rgba(255,255,255,0.2);
+      /* padding: 2px 6px; */
+      border-radius: 5px;
+    }
+
+    .container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Desktop view */
+  gap: 20px;
+  width: 90%;
+  padding: 20px;
+}
+
+/* Responsive for tablets and mobiles */
+@media (max-width: 992px) { /* tablet */
+  .container {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+  }
+}
+
+@media (max-width: 600px) { /* mobile */
+  .container {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
+
+/* Output boxes styling */
+#uppercase, #lowercase, #split, #slice, #reverse, #include, #lenght, #welcome {
+  width: 90%;
+  /* padding: 8px; */
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  word-wrap: break-word;
+  margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      /* font-weight: bold; */
+}
+
+  </style>
+</head>
+<body><div class="container">
+
+  <section class="sec1">
+    <h3> User Information</h3>
+<input type="text" id="name" placeholder="Enter your Name">
+<input type="text" id="city" placeholder="Enter City Name "> 
+<input type="text" id="state" placeholder="Enter state Name "> 
+<input type="text" id="favprogramminglanguage" placeholder="Favourite Language">
+<input type="text" id="hobby" placeholder="Your Hobby">
+<input type="text" id="Country" placeholder="Country Name">
+<input type="text" id="Education" placeholder="Education">
+<button id="submit">Submit</button>
+
+  </section>
+  <section class="sec2">
+<h3> Applying Operation</h3>
+<div id="uppercase"></div>
+<div id="lowercase"></div>
+<div id="split"></div>
+<div id="slice"></div>
+<div id="reverse"></div>
+<div id="include"></div>
+<div id="lenght"></div>
+<div id="welcome"></div>
+
+
+
+
+
+
+  </section>
+
+
+   <section class="sec3">
+    <h3>Method Explain</h3>
+  <div class="accordion container-fluid" id="accordionExample">
+    <!-- Uppercase -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUppercase" aria-expanded="true" aria-controls="collapseUppercase">
+          Uppercase
+        </button>
+      </h2>
+      <div id="collapseUppercase" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Converts text to all uppercase letters.</strong><br/>
+          Example: <code>"hello".toUpperCase() → "HELLO"</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lowercase -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLowercase" aria-expanded="false" aria-controls="collapseLowercase">
+          Lowercase
+        </button>
+      </h2>
+      <div id="collapseLowercase" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Converts text to all lowercase letters.</strong><br/>
+          Example: <code>"HELLO".toLowerCase() → "hello"</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Split -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSplit" aria-expanded="false" aria-controls="collapseSplit">
+          Split
+        </button>
+      </h2>
+      <div id="collapseSplit" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Splits string into an array by a separator.</strong><br/>
+          Example: <code>"Hello World".split(" ") → ["Hello", "World"]</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slice -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSlice" aria-expanded="false" aria-controls="collapseSlice">
+          Slice
+        </button>
+      </h2>
+      <div id="collapseSlice" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Extracts part of a string.</strong><br/>
+          Example: <code>"Hello".slice(1,4) → "ell"</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reverse -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReverse" aria-expanded="false" aria-controls="collapseReverse">
+          Reverse
+        </button>
+      </h2>
+      <div id="collapseReverse" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Reverses all letters of the string.</strong><br/>
+          Example: <code>"Hello".split("").reverse().join("") → "olleH"</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Includes -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIncludes" aria-expanded="false" aria-controls="collapseIncludes">
+          Includes
+        </button>
+      </h2>
+      <div id="collapseIncludes" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Checks if string contains a substring.</strong><br/>
+          Example: <code>"Hello".includes("H") → true</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Length -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLength" aria-expanded="false" aria-controls="collapseLength">
+          Length
+        </button>
+      </h2>
+      <div id="collapseLength" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Shows the number of characters in the string.</strong><br/>
+          Example: <code>"Hello".length → 5</code>
+        </div>
+      </div>
+    </div>
+
+    <!-- Template Literal -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLiteral" aria-expanded="false" aria-controls="collapseLiteral">
+          Template Literal
+        </button>
+      </h2>
+      <div id="collapseLiteral" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>Embed variables inside a string easily.</strong><br/>
+          Example: <code>`Hello ${name}` → "Hello Khadija"</code>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  let input = document.querySelector(".container") // container ko select kya usky andar jitny inputs hein unhy trigger kya event lustener sy
+let ucinput = document.getElementById("name");
+let ucoutput = document.getElementById("uppercase");
+
+let lcinput = document.getElementById("city");
+let lcoutput = document.getElementById("lowercase");
+
+let splitinput = document.getElementById("state");
+let splitoutput = document.getElementById("split");
+
+let sliceinput = document.getElementById("favprogramminglanguage");
+let sliceoutput = document.getElementById("slice");
+
+let revinput = document.getElementById("hobby");
+let revoutput = document.getElementById("reverse");
+
+let incinput = document.getElementById("Country");
+let incoutput = document.getElementById("include");
+
+let btn = document.getElementById("submit")
+let literal = document.getElementById("welcome")
+
+let Educationinput = document.getElementById("Education");
+let Educationoutput = document.getElementById("lenght");
+
+// let ucinput = document.getElementById("name");
+// let output = document.getElementById("uppercase");
+
+
+
+
+
+input.addEventListener("input", function() {
+  ucoutput.innerHTML = ucinput.value.toUpperCase() +"<br/>";
+
+    lcoutput.innerHTML = lcinput.value.toLowerCase()  +"<br/>";
+    // splitoutput.innerHTML = splitinput.value.split(" ,");
+    // lcoutput.innerHTML = lcinput.value.toLowercase();
+    splitoutput.innerHTML = splitinput.value.split("") +"<br/>"; // seprate word in to letter
+    // splitoutput.innerHTML = splitinput.value.split(" "); //seprate words with coma
+    // splitoutput.innerHTML = splitinput.value.split("a"); //seprate words with coma a rmv because it use as a cut point
+    // splitoutput.innerHTML = splitinput.value.split(" ").join("|");  //. join sy space ki jagah ya symbol ayega
+
+    sliceoutput.innerHTML = sliceinput.value.slice(3,9) +"<br/>"
+    revoutput.innerHTML = revinput.value.split("").reverse().join("") + "<br/>"; // to reverse the word split"" break letter in to array reveese(help reverse the array) join(" join the array")
+
+
+
+    incoutput.innerHTML = incinput.value.includes("k") + "<br/>"// if this fiels include if input have letter k output = true
+    Educationoutput.innerHTML = Educationinput.value.length + "<br/>"// word ki lenght
+  
+
+  });
+
+  // using literals
+btn.addEventListener("click",function k(name = "khadija") { // agar field ma ko name na hou tou mera name using default parameter
+  literal.innerHTML = `Hello ${ucinput.value || "John"} Nice to meet you , I hope you have a great day` 
+
+})
+</script>
+</body>
+</html>
